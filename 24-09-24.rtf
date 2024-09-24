@@ -1,0 +1,484 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9\par
+\par
+### 1. Fahrenheit to Celsius Conversion\par
+\par
+#### Pseudo Code\par
+\par
+START\par
+FUNCTION main\par
+    PRINT "Input a degree in Fahrenheit:"\par
+    READ fahrenheit\par
+    celsius = (fahrenheit - 32) * 5 / 9\par
+    PRINT fahrenheit + " degree Fahrenheit is equal to " + celsius + " in Celsius"\par
+END FUNCTION\par
+END\par
+\par
+\par
+#### Java Code\par
+\par
+import java.util.Scanner;\par
+\par
+public class FahrenheitToCelsius \{\par
+    public static void main(String[] args) \{\par
+        Scanner scanner = new Scanner(System.in);\par
+        System.out.print("Input a degree in Fahrenheit: ");\par
+        double fahrenheit = scanner.nextDouble();\par
+        double celsius = (fahrenheit - 32) * 5 / 9;\par
+        System.out.printf("%.1f degree Fahrenheit is equal to %.1f in Celsius%n", fahrenheit, celsius);\par
+        scanner.close();\par
+    \}\par
+\}\par
+\par
+\par
+---\par
+\par
+### 2. Inches to Meters Conversion\par
+\par
+#### Pseudo Code\par
+\par
+START\par
+FUNCTION main\par
+    PRINT "Input a value for inch:"\par
+    READ inch\par
+    meter = inch * 0.0254\par
+    PRINT inch + " inch is " + meter + " meters"\par
+END FUNCTION\par
+END\par
+\par
+\par
+#### Java Code\par
+\par
+import java.util.Scanner;\par
+\par
+public class InchesToMeters \{\par
+    public static void main(String[] args) \{\par
+        Scanner scanner = new Scanner(System.in);\par
+        System.out.print("Input a value for inch: ");\par
+        double inch = scanner.nextDouble();\par
+        double meter = inch * 0.0254;\par
+        System.out.printf("%.1f inch is %.1f meters%n", inch, meter);\par
+        scanner.close();\par
+    \}\par
+\}\par
+\par
+\par
+---\par
+\par
+### 3. Sum of Digits in an Integer\par
+\par
+#### Pseudo Code\par
+\par
+START\par
+FUNCTION main\par
+    PRINT "Input an integer between 0 and 1000:"\par
+    READ number\par
+    sum = 0\par
+    WHILE number > 0\par
+        sum = sum + (number % 10)\par
+        number = number / 10\par
+    PRINT "The sum of all digits is " + sum\par
+END FUNCTION\par
+END\par
+\par
+\par
+#### Java Code\par
+\par
+import java.util.Scanner;\par
+\par
+public class SumOfDigits \{\par
+    public static void main(String[] args) \{\par
+        Scanner scanner = new Scanner(System.in);\par
+        System.out.print("Input an integer between 0 and 1000: ");\par
+        int number = scanner.nextInt();\par
+        int sum = 0;\par
+\par
+        while (number > 0) \{\par
+            sum += number % 10;\par
+            number /= 10;\par
+        \}\par
+        System.out.println("The sum of all digits is " + sum);\par
+        scanner.close();\par
+    \}\par
+\}\par
+\par
+\par
+---\par
+\par
+### 4. Minutes to Years and Days Conversion\par
+\par
+#### Pseudo Code\par
+\par
+START\par
+FUNCTION main\par
+    PRINT "Input the number of minutes:"\par
+    READ minutes\par
+    years = minutes / (60 * 24 * 365)\par
+    days = (minutes % (60 * 24 * 365)) / (60 * 24)\par
+    PRINT minutes + " minutes is approximately " + years + " years and " + days + " days"\par
+END FUNCTION\par
+END\par
+\par
+\par
+#### Java Code\par
+\par
+import java.util.Scanner;\par
+\par
+public class MinutesToYearsDays \{\par
+    public static void main(String[] args) \{\par
+        Scanner scanner = new Scanner(System.in);\par
+        System.out.print("Input the number of minutes: ");\par
+        long minutes = scanner.nextLong();\par
+        long years = minutes / (60 * 24 * 365);\par
+        long days = (minutes % (60 * 24 * 365)) / (60 * 24);\par
+        System.out.printf("%d minutes is approximately %d years and %d days%n", minutes, years, days);\par
+        scanner.close();\par
+    \}\par
+\}\par
+\par
+\par
+---\par
+\par
+### 5. Current Time in GMT\par
+\par
+#### Pseudo Code\par
+\par
+START\par
+FUNCTION main\par
+    PRINT "Input the time zone offset to GMT:"\par
+    READ offset\par
+    currentTime = GMT time + offset\par
+    PRINT "Current time is " + currentTime\par
+END FUNCTION\par
+END\par
+\par
+\par
+#### Java Code\par
+\par
+import java.util.Calendar;\par
+import java.util.Scanner;\par
+\par
+public class CurrentTimeInGMT \{\par
+    public static void main(String[] args) \{\par
+        Scanner scanner = new Scanner(System.in);\par
+        System.out.print("Input the time zone offset to GMT: ");\par
+        int offset = scanner.nextInt();\par
+\par
+        Calendar calendar = Calendar.getInstance();\par
+        calendar.add(Calendar.HOUR_OF_DAY, offset);\par
+        int hours = calendar.get(Calendar.HOUR_OF_DAY);\par
+        int minutes = calendar.get(Calendar.MINUTE);\par
+        int seconds = calendar.get(Calendar.SECOND);\par
+\par
+        System.out.printf("Current time is %02d:%02d:%02d%n", hours, minutes, seconds);\par
+        scanner.close();\par
+    \}\par
+\}\par
+\par
+\par
+---\par
+\par
+### 6. Body Mass Index (BMI) Calculation\par
+\par
+#### Pseudo Code\par
+\par
+START\par
+FUNCTION main\par
+    PRINT "Input weight in pounds:"\par
+    READ weight\par
+    PRINT "Input height in inches:"\par
+    READ height\par
+    bmi = (weight / (height * height)) * 703\par
+    PRINT "Body Mass Index is " + bmi\par
+END FUNCTION\par
+END\par
+\par
+\par
+#### Java Code\par
+\par
+import java.util.Scanner;\par
+\par
+public class BMICalculator \{\par
+    public static void main(String[] args) \{\par
+        Scanner scanner = new Scanner(System.in);\par
+        System.out.print("Input weight in pounds: ");\par
+        double weight = scanner.nextDouble();\par
+        System.out.print("Input height in inches: ");\par
+        double height = scanner.nextDouble();\par
+        double bmi = (weight / (height * height)) * 703;\par
+        System.out.println("Body Mass Index is " + bmi);\par
+        scanner.close();\par
+    \}\par
+\}\par
+\par
+\par
+---\par
+\par
+### 7. Speed Calculation\par
+\par
+#### Pseudo Code\par
+\par
+START\par
+FUNCTION main\par
+    PRINT "Input distance in meters:"\par
+    READ distance\par
+    PRINT "Input hour:"\par
+    READ hours\par
+    PRINT "Input minutes:"\par
+    READ minutes\par
+    PRINT "Input seconds:"\par
+    READ seconds\par
+    totalTime = hours * 3600 + minutes * 60 + seconds\par
+    speedMps = distance / totalTime\par
+    speedKmph = speedMps * 3.6\par
+    speedMph = speedMps * 2.23694\par
+    PRINT speedMps, speedKmph, speedMph\par
+END FUNCTION\par
+END\par
+\par
+\par
+#### Java Code\par
+\par
+import java.util.Scanner;\par
+\par
+public class SpeedCalculator \{\par
+    public static void main(String[] args) \{\par
+        Scanner scanner = new Scanner(System.in);\par
+        System.out.print("Input distance in meters: ");\par
+        double distance = scanner.nextDouble();\par
+        System.out.print("Input hour: ");\par
+        int hours = scanner.nextInt();\par
+        System.out.print("Input minutes: ");\par
+        int minutes = scanner.nextInt();\par
+        System.out.print("Input seconds: ");\par
+        int seconds = scanner.nextInt();\par
+\par
+        double totalTime = hours * 3600 + minutes * 60 + seconds;\par
+        double speedMps = distance / totalTime;\par
+        double speedKmph = speedMps * 3.6;\par
+        double speedMph = speedMps * 2.23694;\par
+\par
+        System.out.printf("Your speed in meters/second is %.8f%n", speedMps);\par
+        System.out.printf("Your speed in km/h is %.8f%n", speedKmph);\par
+        System.out.printf("Your speed in miles/h is %.8f%n", speedMph);\par
+        scanner.close();\par
+    \}\par
+\}\par
+\par
+\par
+---\par
+\par
+### 8. Square, Cube, and Fourth Power\par
+\par
+#### Pseudo Code\par
+\par
+START\par
+FUNCTION main\par
+    PRINT "Enter a number:"\par
+    READ number\par
+    square = number * number\par
+    cube = number * number * number\par
+    fourthPower = square * square\par
+    PRINT square, cube, fourthPower\par
+END FUNCTION\par
+END\par
+\par
+\par
+#### Java Code\par
+\par
+import java.util.Scanner;\par
+\par
+public class PowersCalculator \{\par
+    public static void main(String[] args) \{\par
+        Scanner scanner = new Scanner(System.in);\par
+        System.out.print("Enter a number: ");\par
+        double number = scanner.nextDouble();\par
+        double square = number * number;\par
+        double cube = number * number * number;\par
+        double fourthPower = square * square;\par
+\par
+        System.out.printf("Square: %.2f%n", square);\par
+        System.out.printf("Cube: %.2f%n", cube);\par
+        System.out.printf("Fourth power: %.2f%n", fourthPower);\par
+        scanner.close();\par
+    \}\par
+\}\par
+\par
+\par
+---\par
+\par
+### 9. Integer Operations\par
+\par
+#### Pseudo Code\par
+\par
+START\par
+FUNCTION main\par
+    PRINT "Input 1st integer:"\par
+    READ num1\par
+    PRINT "Input 2nd integer:"\par
+    READ num2\par
+    sum = num1 + num2\par
+    difference = num1 - num2\par
+    product = num1 * num2\par
+    average = sum / 2.0\par
+    distance = ABS(difference)\par
+    max = MAX(num1, num2)\par
+    min = MIN(num1, num2)\par
+    PRINT sum, difference, product, average, distance, max, min\par
+END FUNCTION\par
+END\par
+\par
+\par
+#### Java Code\par
+\par
+import java.util.Scanner;\par
+\par
+public class IntegerOperations \{\par
+    public static void main(String[] args) \{\par
+        Scanner scanner = new Scanner(System.in);\par
+        System.out.print("Input 1st integer: ");\par
+        int num1 = scanner.nextInt();\par
+        System.out.print("Input 2nd integer: ");\par
+        int num2 = scanner.nextInt();\par
+\par
+        int sum = num1 + num2;\par
+        int difference = num1 - num2;\par
+        int\par
+\par
+ product = num1 * num2;\par
+        double average = sum / 2.0;\par
+        int distance = Math.abs(difference);\par
+        int max = Math.max(num1, num2);\par
+        int min = Math.min(num1, num2);\par
+\par
+        System.out.printf("Sum of two integers: %d%n", sum);\par
+        System.out.printf("Difference of two integers: %d%n", difference);\par
+        System.out.printf("Product of two integers: %d%n", product);\par
+        System.out.printf("Average of two integers: %.2f%n", average);\par
+        System.out.printf("Distance of two integers: %d%n", distance);\par
+        System.out.printf("Max integer: %d%n", max);\par
+        System.out.printf("Min integer: %d%n", min);\par
+        scanner.close();\par
+    \}\par
+\}\par
+\par
+\par
+---\par
+\par
+### 10. Breaking Integer into Digits\par
+\par
+#### Pseudo Code\par
+\par
+START\par
+FUNCTION main\par
+    PRINT "Input six non-negative digits:"\par
+    READ number\par
+    STRING numberString = number.toString()\par
+    FOR each digit in numberString\par
+        PRINT digit\par
+END FUNCTION\par
+END\par
+\par
+\par
+#### Java Code\par
+\par
+import java.util.Scanner;\par
+\par
+public class DigitBreaker \{\par
+    public static void main(String[] args) \{\par
+        Scanner scanner = new Scanner(System.in);\par
+        System.out.print("Input six non-negative digits: ");\par
+        int number = scanner.nextInt();\par
+        String numberString = Integer.toString(number);\par
+\par
+        for (char digit : numberString.toCharArray()) \{\par
+            System.out.print(digit + " ");\par
+        \}\par
+        System.out.println();\par
+        scanner.close();\par
+    \}\par
+\}\par
+outputs :\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 
